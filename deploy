@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+if [ -n "$(git status --porcelain)" ]; then echo "There are uncommitted changes or untracked files"; exit; fi
+cp -r www/* deploy-repo/
+dephash=`git rev-parse HEAD`
+cd deploy-repo
+git add --all
+git commit -m "Deploying commit $dephash. See enginact repo for meaningful versioning"
+git push origin master
+

@@ -1,0 +1,3 @@
+[submodule "deploy-repo"]
+	path = deploy-repo
+	url = git@github.com:engineering-activism/engineering-activism.github.io
